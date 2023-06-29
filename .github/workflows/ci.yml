@@ -27,14 +27,14 @@ jobs:
       run: |
         cd ${{github.workspace}}
         pwd
+        ls -al
         pacman -Sy
         pacman -S --noconfirm cmake gcc git
         #git clone https://github.com/blacktail1937/MyProject.git ./
         #echo "====================================================="
         #git log
         #echo "====================================================="
-        ls -al
-  
+        
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
