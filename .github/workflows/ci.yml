@@ -19,22 +19,15 @@ jobs:
     container: 
       image: archlinux:base-devel
       volumes:
-        - ${{github.workspace}}:${{github.workspace}}
+        - ${{github.workspace}}
     steps:
-    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-    #- uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     - name: Install cross compile toolchains
       run: |
-        cd ${{github.workspace}}
         pwd
         ls -al
         pacman -Sy
-        pacman -S --noconfirm cmake gcc git
-        git config --global --add safe.directory ${{github.workspace}}
-        git clone https://github.com/blacktail1937/MyProject.git ./
-        echo "====================================================="
-        git log
-        echo "====================================================="
+        pacman -S --noconfirm cmake gcc
         
 
     - name: Configure CMake
