@@ -26,6 +26,7 @@ jobs:
         pacman -Sy
         pacman -S --noconfirm cmake gcc
         ls -al
+        ls ./.. -al
   
 
     - name: Configure CMake
