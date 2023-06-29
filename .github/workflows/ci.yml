@@ -30,10 +30,11 @@ jobs:
         ls -al
         pacman -Sy
         pacman -S --noconfirm cmake gcc git
-        #git clone https://github.com/blacktail1937/MyProject.git ./
-        #echo "====================================================="
-        #git log
-        #echo "====================================================="
+        git config --global --add ${{github.workspace}}
+        git clone https://github.com/blacktail1937/MyProject.git ./
+        echo "====================================================="
+        git log
+        echo "====================================================="
         
 
     - name: Configure CMake
