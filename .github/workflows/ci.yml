@@ -23,7 +23,7 @@ jobs:
     - name: Install cross compile toolchains
       run: |
         pwd
-        pacman -S --noconfirm cmake gcc
+        sudo pacman -S --noconfirm cmake gcc
   
 
     - name: Configure CMake
