@@ -30,7 +30,7 @@ jobs:
         ls -al
         pacman -Sy
         pacman -S --noconfirm cmake gcc git
-        git config --global --add ${{github.workspace}}
+        git config --global --add safe.directory ${{github.workspace}}
         git clone https://github.com/blacktail1937/MyProject.git ./
         echo "====================================================="
         git log
