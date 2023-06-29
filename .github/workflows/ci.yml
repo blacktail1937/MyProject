@@ -28,10 +28,11 @@ jobs:
         pwd
         pacman -Sy
         pacman -S --noconfirm cmake gcc git
-        git clone https://github.com/blacktail1937/MyProject.git ./
+        #git clone https://github.com/blacktail1937/MyProject.git ./
         #echo "====================================================="
-        git log
+        #git log
         #echo "====================================================="
+        cd ${{github.workspace}}
         ls -al
   
 
