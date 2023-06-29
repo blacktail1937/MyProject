@@ -27,8 +27,8 @@ jobs:
       run: |
         pwd
         pacman -Sy
-        pacman -S --noconfirm cmake gcc githttps://github.com/blacktail1937/MyProject.git ./
-        git clone 
+        pacman -S --noconfirm cmake gcc git
+        git clone https://github.com/blacktail1937/MyProject.git ./
         ls -al
   
 
