@@ -19,7 +19,7 @@ jobs:
     container: 
       image: archlinux:base-devel
       volumes:
-        - ${{github.workspace}}
+        - ${{github.workspace}}:${{github.workspace}}
     steps:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     #- uses: actions/checkout@v3
