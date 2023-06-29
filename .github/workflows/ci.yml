@@ -24,7 +24,7 @@ jobs:
         pwd
         ls -al
         pacman -Sy
-        pacman -S --noconfirm cmake gcc
+        pacman -S --noconfirm cmake
         
 
     - name: Configure CMake
