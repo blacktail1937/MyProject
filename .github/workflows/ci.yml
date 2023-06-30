@@ -24,8 +24,10 @@ jobs:
         pwd
         ls -al
         pacman -Sy
-        pacman -S --noconfirm cmake
-        
+        pacman -S --noconfirm cmake python
+    - name: Run python test
+      run: |
+        python3 test.py
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
