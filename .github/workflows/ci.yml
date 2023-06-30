@@ -24,7 +24,7 @@ jobs:
         pwd
         ls -al
         pacman -Sy
-        pacman -S --noconfirm cmake python
+        pacman -S --noconfirm cmake
     - name: Run python test
       run: |
         python3 test.py
